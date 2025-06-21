@@ -1,5 +1,5 @@
 {
-  "name": "zentra-redirect-worker",
+  "name": "cloudflare",
   "compatibility_date": "2025-06-21",
   "main": "src/index.js",
   "routes": [
