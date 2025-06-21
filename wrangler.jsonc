@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "routes": [
     {
-      "pattern": "*.zentra.city/*",
+      "pattern": "*.zentra.city",
       "zone_name": "zentra.city"
     }
   ]
