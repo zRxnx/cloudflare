@@ -1,0 +1,11 @@
+{
+  "name": "zentra-redirect-worker",
+  "compatibility_date": "2025-06-21",
+  "main": "src/index.js",
+  "routes": [
+    {
+      "pattern": "*.zentra.city/*",
+      "zone_name": "zentra.city"
+    }
+  ]
+}
