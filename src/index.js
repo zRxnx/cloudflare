@@ -5,7 +5,12 @@ export default {
     const excluded = ["www", "txadmin", "connect", "status"]
 
     if (excluded.includes(host)) {
-      return fetch(request)  // Keine Weiterleitung für diese Hosts
+      const res = await fetch(request)
+      // Cache deaktiveren, damit Browser nicht cached
+      const newRes = new Response(res.body, res)
+      newRes.headers.delete("Cache-Control")
+      newRes.headers.set("Cache-Control", "no-store")
+      return newRes
     }
 
     // Alle anderen Subdomains umleiten
