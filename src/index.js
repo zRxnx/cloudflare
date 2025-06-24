@@ -2,7 +2,7 @@ export default {
   async fetch(request) {
     const url = new URL(request.url);
     const host = url.hostname.split('.')?.[0];
-    const excluded = ["www", "connect", "status", "shop", "tebex"]; // txadmin nicht ausgeschlossen
+    const excluded = ["www", "connect", "status", "shop", "tebex", "txadmin.test", "connect.test"]; // txadmin nicht ausgeschlossen
 
     if (host === "txadmin") {
       if (url.pathname === "/" || url.pathname === "") {
